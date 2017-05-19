@@ -20,6 +20,18 @@ void motor::motorControl(bool motor_on, bool direction=true){
   	digitalWrite(pin_B,!direction);
 }
 
+void motor::forward(){
+	this->motorControl(true,true);
+}
+
+void motor::reverse(){
+	this->motorControl(true,false);
+}
+
+void motor::stop(){
+	this->motorControl(false);
+}
+
 
 motor::~motor(){
 }
