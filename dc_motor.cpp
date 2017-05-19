@@ -2,17 +2,19 @@ motor::motor(uint8_t _pin_A, uint8_t _pin_B, uint8_t _pin_enable){
 	pin_A=_pin_A;
 	pin_B=_pin_B;
 	pin_enable=_pin_enable;
-	use_current_sensor=false;
+	//use_current_sensor=false;
 }
 
+/*
 void motor::useCurrentSensor(uint8_t _pin_current){
 	pin_current=_pin_current;
 	use_current_sensor=true;
 }
 
 void motor::int getCurrent(){
-	return analogRead(CURRENT_PIN);
+	return analogRead(pin_current);
 }
+*/
 
 void motor::motorControl(bool motor_on, bool direction=true){
 	digitalWrite(pin_enable,motor_on);

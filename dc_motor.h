@@ -14,6 +14,7 @@ private:
 	//bool use_current_sensor;
 
 	void motorControl(bool motor_on, bool direction);
+	//sint getCurrent()
 
 public:
 	motor(uint8_t _pin_A, uint8_t _pin_B, uint8_t _pin_enable); 
