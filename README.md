@@ -1,6 +1,4 @@
-# dc_motor
-
-DC Motor
+# DC Motor
 
 Basic c++ class (designed for arduino) to implement a DC motor using an H bridge style IC.
 
