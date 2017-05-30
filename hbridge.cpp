@@ -9,9 +9,14 @@ hbridge::hbridge(uint8_t _pin_A, uint8_t _pin_B, uint8_t _pin_enable){
 }
 
 void hbridge::control(bool motor_on, bool direction=true){
-	digitalWrite(pin_enable,motor_on);
-  	digitalWrite(pin_A,direction);
-  	digitalWrite(pin_B,!direction);
+	if(pin_enable!=0) digitalWrite(pin_enable,motor_on);
+	if(motor_on) {
+		digitalWrite(pin_A,direction);
+		digitalWrite(pin_B,!direction);
+	} else {
+		digitalWrite(pin_A,LOW);
+		digitalWrite(pin_B,LOW);
+	}
 }
 
 void hbridge::forward(){
